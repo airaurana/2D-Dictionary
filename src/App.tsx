@@ -1400,7 +1400,7 @@ function App() {
         if (adjectivesAdded > 0) stats.push(`${adjectivesAdded} ${adjectivesAdded === 1 ? 'adjective' : 'adjectives'}`);
         if (adverbsAdded > 0) stats.push(`${adverbsAdded} ${adverbsAdded === 1 ? 'adverb' : 'adverbs'}`);
         
-        setSuccess(`Added ${wordsToAdd.length} ${wordsToAdd.length === 1 ? 'word' : 'words'} from paragraph (${stats.join(', ')})`);
+        setSuccess(`Added ${wordsToAdd.length} ${wordsToAdd.length === 1 ? 'word' : 'words'} from paragraph`);
         setError('');
       } else {
         setError('No new important words (nouns, verbs, adjectives, adverbs) found in the paragraph');
