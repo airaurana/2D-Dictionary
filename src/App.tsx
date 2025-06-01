@@ -274,33 +274,6 @@ const WordItem = styled.div<ThemeProps>`
   }
 `;
 
-// Tooltip for word definitions on hover
-const WordTooltip = styled.div<ThemeProps>`
-  position: absolute;
-  bottom: calc(100% + 5px);
-  left: 0;
-  background-color: ${props => props.isDarkMode ? '#404040' : '#ffffff'};
-  border: 1px solid ${props => props.isDarkMode ? '#505050' : '#e0e0e0'};
-  color: ${props => props.isDarkMode ? '#ffffff' : '#333333'};
-  padding: 8px 12px;
-  border-radius: 4px;
-  z-index: 1000;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  min-width: 200px;
-  max-width: 300px;
-  font-size: 14px;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 15px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: ${props => props.isDarkMode ? '#404040 transparent transparent' : '#ffffff transparent transparent'};
-  }
-`;
-
 const ErrorMessage = styled.div<ThemeProps>`
   color: #ff4d4d;
   margin-bottom: 10px;
@@ -594,7 +567,7 @@ function App() {
           let invalidCount = 0;
           
           // Process each row of CSV data
-          results.data.forEach((row: any, index: number) => {
+          results.data.forEach((row: any) => {
             // Validate row structure - must be array with at least 3 columns
             if (!Array.isArray(row) || row.length < 3) return;
 
