@@ -619,7 +619,7 @@ function App() {
           setActiveModelIndex(models.length);  // Set this new model as the currently active one
           
           // Display success message with statistics about loaded data
-          setSuccess(`Model loaded with ${embeddingsMap.size} words${invalidCount > 0 ? ` (${invalidCount} invalid entries skipped)` : ''}`);
+          setSuccess(`Model loaded with ${embeddingsMap.size} words`);
           setIsLoading(false); // Clear loading state
         },
         // Handle CSV parsing errors
